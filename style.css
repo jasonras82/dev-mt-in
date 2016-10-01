@@ -7,23 +7,25 @@ html, body {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  background-color: #fff;
   height: 100vh;
   width: 100vw;
-  /*background-color: #fff;*/
+  margin: 0;
+  padding: 0;
+  max-width: 800px;
 }
 
 header {
+
   height: 7%;
   width: 100%;
   position: relative;
-  /*border-bottom: solid #979797 1px;*/
+  border-bottom: solid #979797 1px;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #eeeded;
+  /*background-color: #eeeded;*/
 }
 
 .fa-search {
@@ -51,7 +53,7 @@ header {
 }
 
 .inputs > p {
-  width: 98%;
+  width: 300px;
   font-family: 'Lora';
   font
   font-size: 14px;
@@ -63,22 +65,18 @@ header {
 }
 
 input {
-  width: 98%;
+  width: 300px;
   height: 30px;
   margin: 3px 0px;
 }
 
 textarea {
-  width: 98%;
+  width: 300px;
   height: 200px;
   margin: 3px 0px;
   border: 1px solid #b6b6b6;
   padding: 3px 0px;
 }
-
-/*textarea:focus {
-  outline: 1px solid #b6b6b6;
-}*/
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-size: 17px;
@@ -88,7 +86,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 }
 
 .save-changes {
-  width: 98%;
+  width: 300px;
   height: 30px;
   margin: 3px 0px;
   background-color: #74fdf2;
@@ -98,15 +96,37 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   border: 0px;
 }
 
-
 .triangles {
   width: 58%;
-  background-color: #74fdf2;
+  padding: 40px 10px 0 30px;
+  /*background-color: #74fdf2;
   height: 400px;
-  margin-top: 50px;
+  margin-top: 50px;*/
   /*display: inline-block;*/
 }
 
+.triangle-up {
+  width: 0;
+	height: 0;
+	border-left: 200px solid transparent;
+	border-right: 200px solid transparent;
+	border-bottom: 325px solid #74fdf2;
+  z-index: -1;
+  -webkit-transform: rotate(6deg);
+  position: absolute;
+}
+
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-top: 325px solid black;
+  -webkit-transform: rotate(-8deg);
+  position: absolute;
+  margin-top: 190px;
+  overflow: hidden;
+}
 
 footer {
   font-family: 'Open Sans';
@@ -121,7 +141,9 @@ footer {
   align-items: center;
   bottom: 0;
   padding: 20px;
+  max-width: 800px;
 }
+
 footer, div {
 
 }
